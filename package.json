@@ -1,0 +1,27 @@
+{
+  "name": "dockerizetests",
+  "version": "1.0.0",
+  "description": "Dockerize E2E tests",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test:e2e": "codeceptjs run --steps --verbose --config=./e2eTests/docker.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pathak-Akshay/DockerizeTests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pathak-Akshay/DockerizeTests/issues"
+  },
+  "homepage": "https://github.com/Pathak-Akshay/DockerizeTests#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+  "codeceptjs": "^1.2.0",
+  "webdriverio": "^4.12.0"
+}
+}
