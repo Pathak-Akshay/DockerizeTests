@@ -1,2 +1,2 @@
 # DockerizeTests
-Dockerize basic API tests
+Dockerize basic UI tests
