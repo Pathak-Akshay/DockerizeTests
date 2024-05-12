@@ -1,0 +1,22 @@
+version: "2"        
+services:
+  app:
+    container_name: app  
+    build: .             
+    ports:               
+      - "3000:3000"                
+    depends_on:            
+      - firefox-container
+    volumes:             
+      - ./tests:/tests
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./app.js:/app.js
+
+  firefox-container:      
+    container_name: firefox-container
+    image: selenium/standalone-firefox:3.12.0-americium
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "4444:4444"
